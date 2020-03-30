@@ -1,7 +1,7 @@
 var screen = 0;
 var y=-20;
 var x=200;
-var speed = 1;
+var speed = 0.05;
 var score= 0;
 let video;
 let poseNet;
