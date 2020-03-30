@@ -372,6 +372,10 @@ function gameOn() {
         // run below after the sound effect finish
         // Change to next pose
 
+            if (pose_number==3){
+                screen=2;
+            }
+
           if (timerValue >= 10) {
             text("0:" + timerValue, width / 2, height / 2);
           }
@@ -402,10 +406,10 @@ function gameOn() {
         fill(255, 0, 0);
         ellipse(pose.nose.x, pose.nose.y, 16);
         fill(0, 0, 255);
-        ellipse(pose.rightWrist.x, pose.rightWrist.y, 10);
-        ellipse(pose.leftWrist.x, pose.leftWrist.y, 10);
-        ellipse(pose.leftAnkle.x, pose.leftAnkle.y, 10);
-        ellipse(pose.rightAnkle.x, pose.rightAnkle.y, 10);
+        ellipse(pose.rightWrist.x, pose.rightWrist.y, 32);
+        ellipse(pose.leftWrist.x, pose.leftWrist.y, 32);
+        ellipse(pose.leftAnkle.x, pose.leftAnkle.y, 32);
+        ellipse(pose.rightAnkle.x, pose.rightAnkle.y, 32);
     }
 }
 
