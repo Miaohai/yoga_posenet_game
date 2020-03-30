@@ -91,6 +91,12 @@ class Left {
         fill(50,205,50);
         ellipse(this.x, this.y, this.r, this.r);
         // third poses
+      }else if (x==2){
+        this.x = 180;
+        this.y = 102;
+        fill(50,205,50);
+        ellipse(this.x, this.y, this.r, this.r);
+        // third poses
       }
     }
   }
@@ -129,6 +135,12 @@ class Left {
         this.y = 70;
         fill(50,205,50);
         ellipse(this.x, this.y, this.r, this.r);
+      }else if (x==2){
+        this.x = 180;
+        this.y = 102;
+        fill(50,205,50);
+        ellipse(this.x, this.y, this.r, this.r);
+        // third poses
       }
     }
 
@@ -168,6 +180,10 @@ class Nose {
       }else if(x==1){
         this.x = 290;
         this.y = 197;
+        ellipse(this.x, this.y, this.r, this.r);
+      }else if(x==2){
+        this.x = 225;
+        this.y = 179;
         ellipse(this.x, this.y, this.r, this.r);
       }
     }
@@ -209,6 +225,11 @@ class LeftAngkle {
         this.y = 430;
         fill(148,0,211);
         ellipse(this.x, this.y, this.r, this.r);
+      }else if(x==2){
+        this.x = 450;
+        this.y = 430;
+        fill(148,0,211);
+        ellipse(this.x, this.y, this.r, this.r);
       }
     }
 
@@ -245,6 +266,11 @@ class LeftAngkle {
         fill(148,0,211);
         ellipse(this.x, this.y, this.r, this.r);
       }else if(x==1){
+        this.x = 100;
+        this.y = 430;
+        fill(148,0,211);
+        ellipse(this.x, this.y, this.r, this.r);
+      }else if(x==2){
         this.x = 100;
         this.y = 430;
         fill(148,0,211);
@@ -339,6 +365,7 @@ function gameOn() {
         if (nose_count1+lw_count1+rw_count1+rankle_count1+lankle_count1==5){
             hihat.play();
             console.log('bingo')
+            pose_number+=1
         // TO-D0
         //   suppose the player needs to hold the pose with 10 seconds (change to countdown (10s))
         // TO-D0
@@ -354,11 +381,11 @@ function gameOn() {
           if (timerValue == 0) {
             text('game over', width / 2, height / 2 + 15);
           }
-            lw_object.display(random(width),random(height),1)
-            rw_object.display(random(width), random(height),1)
-            nose_object.display(random(width),random(height),1)
-            lankle_object.display(random(width), random(height),1)
-            rankle_object.display(random(width),random(height),1)
+            lw_object.display(random(width),random(height),pose_number)
+            rw_object.display(random(width), random(height),pose_number)
+            nose_object.display(random(width),random(height),pose_number)
+            lankle_object.display(random(width), random(height),pose_number)
+            rankle_object.display(random(width),random(height),pose_number)
             // console.log(pose_number)
 
             // setTimeout(endgame,10000)

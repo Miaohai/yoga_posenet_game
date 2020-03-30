@@ -48,7 +48,6 @@ function startScreen(){
 		fill(255)
 		textAlign(CENTER);
     text('WELCOME TO MY Neck Streching GAME', width / 2, height / 2)
-    text('Try to use your nose to direct the box', width / 2, height / 2)
 		text('click to start', width / 2, height / 2 + 20);
 		reset();
 }
