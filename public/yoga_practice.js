@@ -9,6 +9,7 @@ let nose_object;
 let leftAnkle_object;
 let rightAnkle_object;
 let pose_number=0
+var timerValue = 10;
 function setup() {
     var cnv = createCanvas(640, 480);
     var x = (windowWidth - width) / 2;
@@ -56,7 +57,7 @@ class Left {
     // Location and size
     //   TO-DO
     // Need to change the coordinate 
-      this.x = 400;
+      this.x = 430;
       this.y = 126;
       this.r = 50;
     }
@@ -74,18 +75,20 @@ class Left {
     // Show the lw_object (hardcoded colors, could be improved)
     display(mx, my,x) {
       if (this.contains(mx, my)) {
-        fill(50);
+        fill(50,205,50);
       } else {
-        fill(50);
+        fill(50,205,50);
       }
       stroke(0);
       strokeWeight(4);
       if (x==0){
+        fill(50,205,50);
         ellipse(this.x, this.y, this.r, this.r);
         // second poses
       }else if (x==1){
-        this.x = 238;
-        this.y = 72;
+        this.x = 290;
+        this.y = 70;
+        fill(50,205,50);
         ellipse(this.x, this.y, this.r, this.r);
         // third poses
       }
@@ -98,8 +101,8 @@ class Left {
       // Location and size
     //   TO-DO
      // Need to change the coordinate 
-      this.x = 168;
-      this.y = 184;
+      this.x = 150;
+      this.y = 126;
       this.r = 50;
     }
     contains(mx, my) {
@@ -112,17 +115,19 @@ class Left {
     }
     display(mx, my,x) {
       if (this.contains(mx, my)) {
-        fill(50);
+        fill(50,205,50);
       } else {
-        fill(50);
+        fill(50,205,50);
       }
       stroke(0);
       strokeWeight(4);
       if (x==0){
+        fill(50,205,50);
         ellipse(this.x, this.y, this.r, this.r);
       }else if(x==1){
-        this.x = 183;
-        this.y = 388;
+        this.x = 290;
+        this.y = 70;
+        fill(50,205,50);
         ellipse(this.x, this.y, this.r, this.r);
       }
     }
@@ -136,8 +141,8 @@ class Nose {
       // Location and size
     //   TO-DO
      // Need to change the coordinate 
-      this.x = 364;
-      this.y = 74;
+      this.x = 290;
+      this.y = 70;
       this.r = 50;
     }
     contains(mx, my) {
@@ -161,7 +166,7 @@ class Nose {
       if (x==0){
         ellipse(this.x, this.y, this.r, this.r);
       }else if(x==1){
-        this.x = 173;
+        this.x = 290;
         this.y = 197;
         ellipse(this.x, this.y, this.r, this.r);
       }
@@ -174,8 +179,8 @@ class LeftAngkle {
       // Location and size
     //   TO-DO
      // Need to change the coordinate 
-      this.x = 446;
-      this.y = 380;
+      this.x = 350;
+      this.y = 430;
       this.r = 50;
     }
     contains(mx, my) {
@@ -190,17 +195,19 @@ class LeftAngkle {
   
     display(mx, my,x) {
       if (this.contains(mx, my)) {
-        fill(50);
+        fill(148,0,211);
       } else {
-        fill(50);
+        fill(148,0,211);
       }
       stroke(0);
       strokeWeight(4);
       if (x==0){
+        fill(148,0,211);
         ellipse(this.x, this.y, this.r, this.r);
       }else if(x==1){
-        this.x = 495;
-        this.y = 379;
+        this.x = 450;
+        this.y = 430;
+        fill(148,0,211);
         ellipse(this.x, this.y, this.r, this.r);
       }
     }
@@ -213,8 +220,8 @@ class LeftAngkle {
       // Location and size
     //   TO-DO
      // Need to change the coordinate 
-      this.x = 200;
-      this.y = 380;
+      this.x = 230;
+      this.y = 430;
       this.r = 50;
     }
     contains(mx, my) {
@@ -228,17 +235,19 @@ class LeftAngkle {
     }
     display(mx, my,x) {
       if (this.contains(mx, my)) {
-        fill(50);
+        fill(148,0,211);
       } else {
-        fill(50);
+        fill(148,0,211);
       }
       stroke(0);
       strokeWeight(4);
       if (x==0){
+        fill(148,0,211);
         ellipse(this.x, this.y, this.r, this.r);
       }else if(x==1){
-        this.x = 183;
-        this.y = 388;
+        this.x = 100;
+        this.y = 430;
+        fill(148,0,211);
         ellipse(this.x, this.y, this.r, this.r);
       }
     }
@@ -278,6 +287,11 @@ function startScreen(){
   reset();
 }
 
+function timeIt() {
+  if (timerValue > 0) {
+    timerValue--;
+  }
+}
 
 
 function gameOn() {
@@ -330,6 +344,16 @@ function gameOn() {
         // TO-D0
         // run below after the sound effect finish
         // Change to next pose
+
+          if (timerValue >= 10) {
+            text("0:" + timerValue, width / 2, height / 2);
+          }
+          if (timerValue < 10) {
+            text('0:0' + timerValue, width / 2, height / 2);
+          }
+          if (timerValue == 0) {
+            text('game over', width / 2, height / 2 + 15);
+          }
             lw_object.display(random(width),random(height),1)
             rw_object.display(random(width), random(height),1)
             nose_object.display(random(width),random(height),1)

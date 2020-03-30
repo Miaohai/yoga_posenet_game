@@ -202,7 +202,7 @@ function startScreen(){
   background(96, 157, 255)
   fill(255)
   textAlign(CENTER);
-  text('WELCOME TO MY Yoga Practice', width / 2, height / 2)
+  text('WELCOME TO MY Warm up Game', width / 2, height / 2)
   text('click to start', width / 2, height / 2 + 20);
   reset();
 }
