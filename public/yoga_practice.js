@@ -58,7 +58,7 @@ class Left {
     //   TO-DO
     // Need to change the coordinate 
       this.x = 430;
-      this.y = 126;
+      this.y = 200;
       this.r = 50;
     }
     // Is a point inside the lw_object? (used for mouse rollover, etc.)
@@ -107,8 +107,8 @@ class Left {
       // Location and size
     //   TO-DO
      // Need to change the coordinate 
-      this.x = 150;
-      this.y = 126;
+      this.x = 120;
+      this.y = 200;
       this.r = 50;
     }
     contains(mx, my) {
@@ -154,7 +154,7 @@ class Nose {
     //   TO-DO
      // Need to change the coordinate 
       this.x = 290;
-      this.y = 70;
+      this.y = 120;
       this.r = 50;
     }
     contains(mx, my) {
@@ -195,7 +195,7 @@ class LeftAngkle {
       // Location and size
     //   TO-DO
      // Need to change the coordinate 
-      this.x = 350;
+      this.x = 450;
       this.y = 430;
       this.r = 50;
     }
@@ -241,7 +241,7 @@ class LeftAngkle {
       // Location and size
     //   TO-DO
      // Need to change the coordinate 
-      this.x = 230;
+      this.x = 100;
       this.y = 430;
       this.r = 50;
     }
