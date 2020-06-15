@@ -1,6 +1,9 @@
 # Yoga Pose Online - Practice Online with your friends
 
-### By using [simple-peer](https://github.com/feross/simple-peer), this web app connects video chat between two clients.
+Using PoseNet model to create a virtual yoga instructor which guide and instruct a student during their yoga session and improve their form.
+
+PoseNet can be used to estimate either a single pose or multiple poses, meaning there is a version of the algorithm that can detect only one person in an image/video and one version that can detect multiple persons in an image/video.
+
 
 # How To run
 
@@ -12,4 +15,4 @@
 ## For development run watchify 
   - npm run watch  
 
-Open localhost in two browser tabs.
+Open localhost in one browser tabs.
